@@ -15,7 +15,7 @@ public class Main extends Application {
         try{
             control = new StudentController(view, model);
 
-        }catch (SQLException e){
+        } catch (SQLException e){
             e.printStackTrace();
             System.out.println(e.getMessage());
         }

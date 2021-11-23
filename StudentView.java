@@ -15,19 +15,13 @@ public class StudentView {
     ComboBox<String> theCourseNameCombo;
     ComboBox<Integer> theCourseYearCombo;
     ComboBox<String> theStudentCombo;
-    ComboBox<Integer> newGradeCombo;
-    ComboBox<Integer> studentIDCombo;
     Button FindCourseInfo;
     Button FindStudentInfo;
-    Button UpdateGrade;
     TextArea text;
-
 
     ObservableList<String> CourseName;
     ObservableList<Integer> CourseYear;
     ObservableList<String> Students;
-    ObservableList<Integer> Grades;
-    ObservableList<Integer> studentID;
 
     public StudentView(){
         startview = new GridPane();
@@ -56,17 +50,9 @@ public class StudentView {
         startview.add(FindCourseInfo, 5,13);
         FindStudentInfo = new Button("Find info on Student");
         startview.add(FindStudentInfo,10,13);
-        UpdateGrade = new Button("Update Grade");
-        startview.add(UpdateGrade, 12,13);
 
         text = new TextArea();
         startview.add(text,1,20,30,10);
-
-        studentIDCombo = new ComboBox<>();
-        startview.add(studentIDCombo, 12,8,2,1);
-        newGradeCombo = new ComboBox<>();
-        startview.add(newGradeCombo, 15,8,2,1);
-
     }
 
     public void configure(){
@@ -78,14 +64,6 @@ public class StudentView {
 
         theStudentCombo.setItems(Students);
         theStudentCombo.getSelectionModel().selectFirst();
-
-        newGradeCombo.setItems(Grades);
-        newGradeCombo.getSelectionModel().selectFirst();
-
-        studentIDCombo.setItems(studentID);
-        studentIDCombo.getSelectionModel().selectFirst();
-
-
     }
 
     public Parent asParent(){
